@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Para ti, mi vida 💖</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Georgia', serif;
+      background: #fff0f6;
+      color: #b10059;
+      overflow: hidden;
+    }
+
+    .background {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+
+    .te-amo {
+      position: absolute;
+      color: #ff004d;
+      font-weight: bold;
+      font-size: 2em;
+      text-shadow: 1px 1px 4px white;
+      opacity: 0.7;
+      animation: flotar 10s linear infinite;
+    }
+
+    @keyframes flotar {
+      0% {
+        transform: translateY(100vh) rotate(0deg);
+        opacity: 0;
+      }
+      50% {
+        opacity: 0.8;
+      }
+      100% {
+        transform: translateY(-10vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    .card {
+      position: relative;
+      margin: 40px auto;
+      padding: 20px;
+      max-width: 600px;
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 1.4em;
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 0.9em;
+      line-height: 1.4em;
+      margin-bottom: 12px;
+    }
+
+    .final {
+      font-weight: bold;
+      font-size: 1em;
+      margin-top: 25px;
+      color: #d6336c;
+    }
+
+    audio {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="background" id="fondoteamo"></div>
+
+  <div class="card">
+    <h1>🌹 Para ti, mi amor 🌹</h1>
+    <p>Desde que llegaste a mi vida, todo cambió para mejor.</p>
+    <p>Tu risa me cura, tus abrazos son mi hogar.</p>
+    <p>En cada palabra tuya encuentro paz,</p>
+    <p>y en cada mirada tuya encuentro mi lugar.</p>
+
+    <p>Eres la inspiración de mis días,</p>
+    <p>la calma de mis noches, mi alegría.</p>
+    <p>Amarte es mi destino, mi suerte,</p>
+    <p>y tenerte es vencer a la vida con amor fuerte.</p>
+
+    <p>Hoy, 1 de agosto, quiero decirte una vez más:</p>
+    <p>¡Gracias por tanto amor, por tu paciencia, por tu paz!</p>
+    <p>Te amo más allá de todo lo que pueda escribir,</p>
+    <p>porque amarte a ti… es simplemente vivir.</p>
+
+    <p class="final">Gracias por estar a mi lado. Te amo mucho, mi vida. 💖</p>
+  </div>
+
+  <!-- MÚSICA de fondo -->
+  <audio autoplay loop>
+    <source src="kevin-kaarl.mp3" type="audio/mpeg">
+    Tu navegador no admite audio HTML.
+  </audio>
+
+  <script>
+    // Generar 80 "Te amo" flotantes y grandes
+    const fondo = document.getElementById('fondoteamo');
+    for (let i = 0; i < 80; i++) {
+      const t = document.createElement('div');
+      t.className = 'te-amo';
+      t.innerText = 'Te amo 💖';
+      t.style.left = Math.random() * 100 + 'vw';
+      t.style.top = Math.random() * 100 + 'vh';
+      t.style.fontSize = (1.8 + Math.random() * 1.2) + 'em';
+      t.style.animationDuration = (6 + Math.random() * 8) + 's';
+      fondo.appendChild(t);
+    }
+  </script>
+
+</body>
+</html>
